@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main.h(void)
 {
 	int str[] = {72, 111, 108, 98, 101, 114, 116, 111, 110};
 	int count, sz;
