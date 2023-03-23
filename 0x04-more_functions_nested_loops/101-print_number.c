@@ -7,36 +7,24 @@
  * Return: nothing
  **/
 
-void print_number(int n)
-{
-	int size, digit;
-	long counter, sign;
+void print_number(int n) {
+    int digits = 1;
 
-	sign = 1;
-	digit = 0;
-	size = 1;
-	counter = n;
+    // Handle negative numbers
+    if (n < 0) {
+        _putchar('-');
+        n = -n;
+    }
 
-	if (n < 0)
-	{
-		_putchar('-');
-		sign = -1;
-		counter *= sign;
-	}
+    // Count the number of digits in the number
+    int temp = n;
+    while (temp / 10 != 0) {
+        digits++;
+        temp /= 10;
+    }
 
-	for (; counter >= 10; size++)
-	{
-		counter = counter / 10;
-	}
-
-	counter = sign * (long)n;
-
-	while (size >= 2)
-	{
-		digit = (counter / exponent(10, size - 1));
-		_putchar(digit + '0');
-		counter = counter % exponent(10, size - 1);
-		size--;
-	}
-	_putchar(counter % 10 + '0');
+    // Print each digit in reverse order
+    for (int i = digits; i > 0; i--) {
+        _putchar((n / (int)pow(10, i-1)) % 10 + '0');
+    }
 }
