@@ -1,12 +1,3 @@
-#include "main.h"
-
-/**
- * print_number - print an int using only _putchar
- * @number: int to be printed by function
- *
- * Return: nothing
- **/
-
 void print_number(int n) {
     int digits = 1;
 
