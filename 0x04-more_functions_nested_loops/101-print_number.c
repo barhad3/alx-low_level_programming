@@ -1,21 +1,17 @@
-void print_number(int n) {
-    int digits = 1;
+#include "main.h"
 
-    // Handle negative numbers
+/**
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
+ */
+void print_number(int n) {
     if (n < 0) {
         _putchar('-');
         n = -n;
     }
-
-    // Count the number of digits in the number
-    int temp = n;
-    while (temp / 10 != 0) {
-        digits++;
-        temp /= 10;
+    if (n / 10) {
+        print_number(n / 10);
     }
-
-    // Print each digit in reverse order
-    for (int i = digits; i > 0; i--) {
-        _putchar((n / (int)pow(10, i-1)) % 10 + '0');
-    }
+    _putchar(n % 10 + '0');
 }
