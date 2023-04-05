@@ -4,7 +4,6 @@
  * _pow_recursion - Returns the value of x raised to the power of y
  * @x: The base number
  * @y: The power to raise the base number to
- *
  * Return: The result of x raised to the power of y
  *         -1 if y is lower than 0
  */
